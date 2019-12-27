@@ -13,7 +13,7 @@ let y = Math.floor(Math.random() * height);
 
 ctx.lineJoin = 'round';
 ctx.lineCap = 'round';
-ctx.lineWidth = 30;
+ctx.lineWidth = 50;
 
 let hue = 0;
 ctx.strokeStyle= `hsl(${hue}, 100%, 50%)`;
@@ -65,7 +65,7 @@ function handleKey(e) {
 function clearCanvas() {
   canvas.classList.add('shake');
   ctx.clearRect(0, 0, width, height);
-  canvas.addEventListener('animationnd', function() {
+  canvas.addEventListener('animationend', function() {
     canvas.classList.remove('shake');
   }, { once: true }
   )
